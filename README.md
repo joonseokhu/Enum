@@ -9,7 +9,7 @@ const sample = new Enum('north', 'south', 'west', 'east')
 - Each argument has to be string which has more than 0 character.
 - Each argument has to be unique to each other.
 
-# Comparison
+## Comparison
 
 - Each enum value is treated as to be unique
 
