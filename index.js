@@ -17,6 +17,7 @@ class Enum {
         [Symbol(e)]: e,
         toString: () => e,
       }
+      Object.freeze(result);
       this[e] = result;
     }
     Object.freeze(this);
