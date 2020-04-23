@@ -1,20 +1,13 @@
 const Enum = require('../')
 
-const Foo = Enum('dd', 'fff');
+const Direction = new Enum('north', 'south', 'west', 'east')
+const UserTypes = new Enum('owner', 'admin', 'user')
 
-const json = JSON.stringify({
-  type: Foo.dd,
-})
+const t1 = Direction('east').isEqual(Direction.east) // true
+const t2 = Direction.east.isEqual(Direction('east')) // true
 
-const keys = Object.keys(Foo)
-
-const compare = Foo().compare(Foo.dd, Foo.dd)
-
-// const equal = Foo.dd.isEqual(Foo('dd'))
+const t3 = Direction('east').isEqual(UserTypes.admin) // false
 
 console.log({
-  json,
-  keys,
-  Foo: Foo.toString(),
-  compare,
-});
+  t1, t2, t3
+})
