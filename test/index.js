@@ -9,5 +9,5 @@ const t2 = Direction.east.isEqual(Direction('east')) // true
 const t3 = Direction('east').isEqual(UserTypes.admin) // false
 
 console.log({
-  t1, t2, t3
+  t1, t2, t3, Direction
 })

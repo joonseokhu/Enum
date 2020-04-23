@@ -4,6 +4,8 @@ A Polyfill to use Enum in JavaScript
 ## How to use this
 ```js
 const Direction = new Enum('north', 'south', 'west', 'east')
+// or
+const Direction = Enum('north', 'south', 'west', 'east')
 ```
 
 - Each argument has to be string which has more than 0 character.
@@ -56,18 +58,18 @@ const MyDirection = Object.assign(Direction.west, { northwest: 'northwest' })
 const Direction = new Enum('north', 'south', 'west', 'east')
 const UserTypes = new Enum('owner', 'admin', 'user')
 
-Directions().has(Direction.south) // true
-Directions().has(UserTypes.owner) // false
+Direction().has(Direction.south) // true
+Direction().has(UserTypes.owner) // false
 ```
 
 - You can also compare enum values by methods
 
 ```js
 const Direction = new Enum('north', 'south', 'west', 'east')
-Directions().compare(Direction.west, Direction.west) // true
-Directions().compare(Direction.west, Direction.east) // false
-Directions().compare(Direction.west, Direction.northwest) // false
-Directions().compare(Direction.west, 'west') // false
+Direction().compare(Direction.west, Direction.west) // true
+Direction().compare(Direction.west, Direction.east) // false
+Direction().compare(Direction.west, Direction.northwest) // false
+Direction().compare(Direction.west, 'west') // false
 ```
 
 - You can also compare enum values like this
