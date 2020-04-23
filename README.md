@@ -48,7 +48,7 @@ const MyDirection = Object.assign(Direction.west, { northwest: 'northwest' })
 // TypeError: Cannot assign to read only property 'value' of object '[object Object]'
 ```
 
-### Utilities
+## Utilities
 
 - You can check whether a value is a valid enum element
 
@@ -82,3 +82,7 @@ Direction('east').isEqual(UserTypes.admin) // false
 Direction('east').isEqual(Direction('west')) // false
 Direction('east').isEqual('east') // false
 ```
+
+## License
+
+MIT.
